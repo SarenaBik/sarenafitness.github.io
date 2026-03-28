@@ -899,7 +899,7 @@
     /* ── Responsive ────────────────────────────────────────────── */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; text-align: center; padding-top: 80px; }
-      .hero-image { display: flex; justify-content: center; align-items: center; min-height: 340px; order: -1; }
+      .hero-image { display: flex; justify-content: center; align-items: center; min-height: 340px; order: -1; padding-right: 0; }
       .hero-image-wrap { max-width: 280px; margin: 0 auto; }
       .hero-image-wrap > div { height: 300px !important; }
       .hero-badge { right: -8px; width: 76px; height: 76px; font-size: 9px; top: 16px; }
@@ -923,8 +923,70 @@
       .services-grid { grid-template-columns: 1fr; }
       .contact-options { flex-direction: column; align-items: center; }
       .contact-option { width: 100%; max-width: 300px; }
-      .hero { padding-top: 80px; }
+
+      /* ── Hero phone fixes ── */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        padding-top: 72px;
+        min-height: 100svh;
+        text-align: center;
+      }
+      .hero-image {
+        order: -1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0;
+        min-height: unset;
+        width: 100%;
+      }
+      .hero-image-wrap {
+        max-width: 260px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+      .hero-image-wrap > div {
+        width: 100% !important;
+        height: 320px !important;
+        border-radius: 50% 50% 45% 45% / 60% 60% 40% 40% !important;
+        overflow: hidden;
+        animation: none !important;
+      }
+      .hero-image-wrap > div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+      }
+      .hero-badge {
+        width: 68px;
+        height: 68px;
+        font-size: 8px;
+        top: 8px;
+        right: -4px;
+      }
+      .hero-image-card {
+        left: -8px;
+        bottom: 12px;
+        padding: 8px 12px;
+        gap: 8px;
+      }
+      .card-icon { width: 34px; height: 34px; font-size: 16px; }
+      .card-text strong { font-size: 13px; }
+      .card-text span { font-size: 11px; }
+      .hero-content {
+        padding: 20px 24px 80px !important;
+      }
+      .hero-pill { margin-bottom: 16px; }
+      .hero-title { font-size: clamp(40px, 11vw, 60px); margin-bottom: 14px; }
+      .hero-sub { font-size: 15px; max-width: 100%; margin-bottom: 28px; }
+      .hero-actions { justify-content: center; }
+      .hero-blob { display: none; }
     }
+
   </style>
 </head>
 <body>
@@ -983,7 +1045,7 @@
 
       <div class="hero-image">
         <div class="hero-image-wrap">
-          <div class="hero-badge">Women<br>Only<br>Training</div>
+
           <div style="width:100%;height:500px;border-radius:60% 40% 70% 30% / 50% 60% 40% 50%;overflow:hidden;animation:blobMorph 12s ease-in-out infinite alternate;">
             <img src="SarenaPortrait.png" alt="Sarena" style="width:100%;height:100%;object-fit:cover;object-position:top center;" />
           </div>
