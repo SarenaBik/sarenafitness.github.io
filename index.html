@@ -213,8 +213,7 @@
       text-transform: uppercase;
       color: var(--pink);
       margin-bottom: 28px;
-      opacity: 0;
-      animation: fadeUp 0.7s var(--transition) 0.2s forwards;
+      animation: fadeUp 0.7s var(--transition) 0.2s both;
     }
     .hero-pill::before {
       content: '';
@@ -230,8 +229,7 @@
     .hero-title {
       font-size: clamp(52px, 6vw, 82px);
       margin-bottom: 20px;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--transition) 0.35s forwards;
+      animation: fadeUp 0.8s var(--transition) 0.35s both;
     }
     .hero-title em {
       font-style: italic;
@@ -245,16 +243,14 @@
       line-height: 1.7;
       max-width: 420px;
       margin-bottom: 40px;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--transition) 0.5s forwards;
+      animation: fadeUp 0.8s var(--transition) 0.5s both;
     }
     .hero-actions {
       display: flex;
       gap: 16px;
       align-items: center;
       flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--transition) 0.65s forwards;
+      animation: fadeUp 0.8s var(--transition) 0.65s both;
     }
     .btn-primary {
       display: inline-flex;
@@ -306,8 +302,7 @@
       align-items: flex-end;
       height: 100%;
       min-height: 550px;
-      opacity: 0;
-      animation: fadeIn 1.2s var(--transition) 0.3s forwards;
+      animation: fadeIn 1.2s var(--transition) 0.3s both;
     }
     .hero-image-wrap {
       position: relative;
@@ -970,8 +965,8 @@
       <div class="hero-content" style="padding-left:max(24px, calc((100vw - 1100px)/2)); padding-right:24px;">
         <div class="hero-pill">For Women Only</div>
         <h1 class="hero-title display">
-          Fitness that fits<br>
-          <em>your life.</em>
+          Start your<br>
+          <em>journey.</em>
         </h1>
         <p class="hero-sub">
           In-home personal training designed exclusively for women. I come to you — so you can train in comfort, on your schedule, with real results.
